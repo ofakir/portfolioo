@@ -783,4 +783,76 @@ section {
     flex-direction: column;
     align-items: center;
   }
-} 
+}
+
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  margin-left: 1rem;
+}
+.burger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+
+@media (max-width: 900px) {
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 70vw;
+    max-width: 320px;
+    height: 100vh;
+    background: #14213d;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4rem 2rem 2rem 2rem;
+    gap: 2rem;
+    transition: right 0.3s;
+    z-index: 1000;
+    box-shadow: -2px 0 12px rgba(0,0,0,0.12);
+  }
+  nav ul.open {
+    right: 0;
+  }
+  .burger {
+    display: flex;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+  }
+  nav .nav-separator {
+    display: none;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .contact-flex {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .contact-cards {
+    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  #contact-form {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}
